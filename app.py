@@ -9,6 +9,7 @@ df_vistas = pd.read_csv("vistas_eventos.csv", parse_dates=["Fecha"])
 
 # Crear aplicación Dash
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.H1("Dashboard de Métricas de Eventos", style={"textAlign": "center"}),
