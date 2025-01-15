@@ -5,7 +5,7 @@ import datetime
 # Generar datos sintéticos para ventas
 eventos = ["Concierto A", "Obra de Teatro B", "Feria C", "Conferencia D", "Exposición E"]
 categorias = ["Música", "Teatro", "Cultura", "Educación", "Arte"]
-ubicaciones = ["Manta", "GUayaquil", "Cuenca", "Quito", "Ambato"]
+ubicaciones = ["Manta", "Guayaquil", "Cuenca", "Quito", "Ambato"]
 
 # Crear dataset
 data_ventas = []
@@ -33,9 +33,10 @@ for i in range(1000):  # Generar 1000 filas de datos
     fecha = datetime.date(2024, random.randint(1, 12), random.randint(1, 28))
     id_usuario = f"user_{random.randint(1, 300)}"
     tiempo_visualizacion = random.randint(1, 300)  # En segundos
-    
-    data_vistas.append([fecha, id_usuario, tiempo_visualizacion])
+    ubicacion = random.choice(ubicaciones)
 
-df_vistas = pd.DataFrame(data_vistas, columns=["Fecha", "ID Usuario", "Tiempo de Visualización"])
+    data_vistas.append([fecha, id_usuario, tiempo_visualizacion, ubicacion])
+
+df_vistas = pd.DataFrame(data_vistas, columns=["Fecha", "ID Usuario", "Tiempo de Visualización", "Ubicación"])
 df_vistas.to_csv("vistas_eventos.csv", index=False)
 print("Archivo vistas_eventos.csv generado.")

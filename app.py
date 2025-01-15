@@ -4,18 +4,14 @@ import pandas as pd
 import plotly.express as px
 import os
 
-# Cargar datos sintéticos
-
-import pandas as pd
-
 # Obtener el directorio donde se ejecuta el script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Construir la ruta completa al archivo
 PATH_VENTAS = os.path.join(BASE_DIR, "ventas_eventos.csv")
 PATH_VISTAS = os.path.join(BASE_DIR, "vistas_eventos.csv")
-# Leer el archivo CSV
 
+# Leer el archivo CSV
 df_ventas = pd.read_csv(PATH_VENTAS, parse_dates=["Fecha"])
 df_vistas = pd.read_csv(PATH_VISTAS, parse_dates=["Fecha"])
 
@@ -29,6 +25,17 @@ app.layout = html.Div([
         dcc.Tab(label="Tasa de Conversión de Ventas", children=[
             html.Div([
                 dcc.Graph(id="grafico-conversion"),
+                html.P("La tasa de conversión de ventas mide cuántas visualizaciones se convirtieron en ventas exitosas."),
+                html.Label("Tipo de análisis:"),
+                dcc.RadioItems(
+                    id="tipo-analisis-conversion",
+                    options=[
+                        {"label": "Mostrar todo", "value": "todo"},
+                        {"label": "Comparar por ciudades", "value": "comparar"}
+                    ],
+                    value="todo",
+                    inline=True
+                ),
                 html.Label("Filtrar por rango de fechas:"),
                 dcc.DatePickerRange(
                     id="rango-fechas-conversion",
@@ -48,6 +55,7 @@ app.layout = html.Div([
         dcc.Tab(label="Índice de Rentabilidad", children=[
             html.Div([
                 dcc.Graph(id="grafico-rentabilidad"),
+                html.P("El índice de rentabilidad refleja el margen bruto promedio en relación al total de ingresos."),
                 html.Label("Filtrar por categoría:"),
                 dcc.Dropdown(
                     id="filtro-categoria",
@@ -67,6 +75,7 @@ app.layout = html.Div([
         dcc.Tab(label="Satisfacción del Cliente", children=[
             html.Div([
                 dcc.Graph(id="grafico-satisfaccion"),
+                html.P("La satisfacción del cliente mide el promedio de calificaciones recibidas por evento."),
                 html.Label("Tipo de análisis:"),
                 dcc.RadioItems(
                     id="tipo-analisis-satisfaccion",
@@ -75,7 +84,7 @@ app.layout = html.Div([
                         {"label": "Promedio general", "value": "general"}
                     ],
                     value="general",
-                    inline=True  # Muestra las opciones horizontalmente
+                    inline=True
                 ),
                 html.Label("Filtrar por evento:"),
                 dcc.Dropdown(
@@ -96,6 +105,7 @@ app.layout = html.Div([
         dcc.Tab(label="Tiempo de Visualización", children=[
             html.Div([
                 dcc.Graph(id="grafico-visualizacion"),
+                html.P("El tiempo total de visualización muestra la cantidad de tiempo dedicada a visualizar contenido por fecha."),
                 html.Label("Filtrar por rango de fechas:"),
                 dcc.DatePickerRange(
                     id="rango-fechas-visualizacion",
@@ -113,10 +123,10 @@ app.layout = html.Div([
     Output("grafico-conversion", "figure"),
     Input("rango-fechas-conversion", "start_date"),
     Input("rango-fechas-conversion", "end_date"),
-    Input("filtro-ciudad-conversion", "value")
+    Input("filtro-ciudad-conversion", "value"),
+    Input("tipo-analisis-conversion", "value")
 )
-def actualizar_conversion(start_date, end_date, ciudades_seleccionadas):
-    # Filtrar datos según las selecciones
+def actualizar_conversion(start_date, end_date, ciudades_seleccionadas, tipo_analisis):
     df_ventas_filtrado = df_ventas[
         (df_ventas["Fecha"] >= start_date) &
         (df_ventas["Fecha"] <= end_date) &
@@ -126,116 +136,35 @@ def actualizar_conversion(start_date, end_date, ciudades_seleccionadas):
         (df_vistas["Fecha"] >= start_date) &
         (df_vistas["Fecha"] <= end_date)
     ]
-    
-    # Agrupar datos por fecha
-    ventas_agrupadas = df_ventas_filtrado.groupby("Fecha")["Entradas Vendidas"].sum().reset_index()
-    vistas_agrupadas = df_vistas_filtrado.groupby("Fecha")["Tiempo de Visualización"].count().reset_index()
-    
-    # Combinar datos de ventas y vistas
-    conversion = pd.merge(ventas_agrupadas, vistas_agrupadas, on="Fecha", how="inner")
+    print(df_ventas_filtrado.columns)
+    ventas_agrupadas = df_ventas_filtrado.groupby(["Fecha", "Ubicación"])["Entradas Vendidas"].sum().reset_index()
+    vistas_agrupadas = df_vistas_filtrado.groupby(["Fecha", "Ubicación"])["Tiempo de Visualización"].count().reset_index()
+    conversion = pd.merge(ventas_agrupadas, vistas_agrupadas, on=["Fecha", "Ubicación"], how="inner")
     conversion["Tasa de Conversión"] = conversion["Entradas Vendidas"] / conversion["Tiempo de Visualización"]
-    
-    # Crear gráfico de línea
-    fig = px.line(
-        conversion,
-        x="Fecha",
-        y="Tasa de Conversión",
-        title="Tasa de Conversión de Ventas",
-        labels={"Tasa de Conversión": "Tasa de Conversión"}
-    )
-    return fig
-
-# Callback para el índice de rentabilidad
-@app.callback(
-    Output("grafico-rentabilidad", "figure"),
-    Input("filtro-categoria", "value"),
-    Input("filtro-ciudad-rentabilidad", "value")
-)
-def actualizar_rentabilidad(categorias_seleccionadas, ciudades_seleccionadas):
-    # Filtrar datos según las selecciones
-    df_filtrado = df_ventas[
-        (df_ventas["Categoría"].isin(categorias_seleccionadas)) &
-        (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
-    ]
-    
-    df_filtrado["Margen Bruto"] = df_filtrado["Total"] - df_filtrado["Descuento"]
-    df_filtrado["Índice de Rentabilidad"] = df_filtrado["Margen Bruto"] / df_filtrado["Total"]
-    
-    # Agrupar por categoría y calcular el promedio del índice de rentabilidad
-    df_grouped = df_filtrado.groupby("Categoría")["Índice de Rentabilidad"].mean().reset_index()
-    
-    # Crear gráfico de barras
-    fig = px.bar(
-        df_grouped,
-        x="Categoría",
-        y="Índice de Rentabilidad",
-        title="Índice de Rentabilidad de Operaciones por Categoría",
-        labels={"Índice de Rentabilidad": "Índice de Rentabilidad Promedio"}
-    )
-    
-    # Agregar etiquetas a las barras
-    fig.update_traces(text=df_grouped["Índice de Rentabilidad"].round(2), textposition="outside")
-    return fig
-@app.callback(
-    Output("grafico-satisfaccion", "figure"),
-    Input("filtro-evento", "value"),
-    Input("filtro-ciudad-satisfaccion", "value"),
-    Input("tipo-analisis-satisfaccion", "value")
-)
-def actualizar_satisfaccion(eventos_seleccionados, ciudades_seleccionadas, tipo_analisis):
-    # Filtrar datos según las selecciones
-    df_filtrado = df_ventas[
-        (df_ventas["Evento"].isin(eventos_seleccionados)) &
-        (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
-    ]
-    df_filtrado["Satisfacción"] = pd.to_numeric(df_filtrado["Satisfacción"], errors="coerce")
-    df_filtrado = df_filtrado.dropna(subset=["Satisfacción"])
 
     if tipo_analisis == "comparar":
-        # Agrupar por evento y fecha para comparar por eventos
-        df_grouped = df_filtrado.groupby(["Fecha", "Evento"])["Satisfacción"].mean().reset_index()
         fig = px.line(
-            df_grouped,
+            conversion,
             x="Fecha",
-            y="Satisfacción",
-            color="Evento",
-            title="Satisfacción Promedio del Cliente por Evento",
-            labels={"Satisfacción": "Promedio de Satisfacción"}
+            y="Tasa de Conversión",
+            color="Ubicación",
+            title="Tasa de Conversión de Ventas por Ciudad",
+            labels={"Tasa de Conversión": "Tasa de Conversión"}
         )
     else:
-        # Calcular el promedio general de satisfacción por fecha
-        df_grouped = df_filtrado.groupby("Fecha")["Satisfacción"].mean().reset_index()
+        conversion_total = conversion.groupby("Fecha").agg({
+            "Entradas Vendidas": "sum",
+            "Tiempo de Visualización": "sum"
+        }).reset_index()
+        conversion_total["Tasa de Conversión"] = conversion_total["Entradas Vendidas"] / conversion_total["Tiempo de Visualización"]
         fig = px.line(
-            df_grouped,
+            conversion_total,
             x="Fecha",
-            y="Satisfacción",
-            title="Satisfacción Promedio del Cliente",
-            labels={"Satisfacción": "Promedio de Satisfacción"}
+            y="Tasa de Conversión",
+            title="Tasa de Conversión de Ventas Total",
+            labels={"Tasa de Conversión": "Tasa de Conversión"}
         )
 
-    # Opcional: Configurar el rango del eje Y si aplica
-    fig.update_yaxes(range=[1, 5])
-    return fig
-
-# Callback para el tiempo de visualización
-@app.callback(
-    Output("grafico-visualizacion", "figure"),
-    Input("rango-fechas-visualizacion", "start_date"),
-    Input("rango-fechas-visualizacion", "end_date")
-)
-def actualizar_visualizacion(start_date, end_date):
-    df_filtrado = df_vistas[
-        (df_vistas["Fecha"] >= start_date) &
-        (df_vistas["Fecha"] <= end_date)
-    ]
-    df_grouped = df_filtrado.groupby("Fecha")["Tiempo de Visualización"].sum().reset_index()
-    fig = px.line(
-        df_grouped,
-        x="Fecha",
-        y="Tiempo de Visualización",
-        title="Tiempo Total de Visualización por Fecha",
-        labels={"Tiempo de Visualización": "Tiempo Total (segundos)"}
-    )
     return fig
 
 if __name__ == "__main__":
