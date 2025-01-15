@@ -3,12 +3,21 @@ from dash import dcc, html, Input, Output
 import pandas as pd
 import plotly.express as px
 import os
+
+# Cargar datos sintéticos
+
 import pandas as pd
 
+# Obtener el directorio donde se ejecuta el script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-CSV_PATH = os.path.join(BASE_DIR, "ventas_eventos.csv")
-df_ventas = pd.read_csv(CSV_PATH, parse_dates=["Fecha"])
+# Construir la ruta completa al archivo
+PATH_VENTAS = os.path.join(BASE_DIR, "ventas_eventos.csv")
+PATH_VISTAS = os.path.join(BASE_DIR, "vistas_eventos.csv")
+# Leer el archivo CSV
+
+df_ventas = pd.read_csv(PATH_VENTAS, parse_dates=["Fecha"])
+df_vistas = pd.read_csv(PATH_VISTAS, parse_dates=["Fecha"])
 
 # Crear aplicación Dash
 app = dash.Dash(__name__)
