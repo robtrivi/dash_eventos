@@ -2,10 +2,13 @@ import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
 import plotly.express as px
+import os
+import pandas as pd
 
-# Cargar datos sintéticos
-df_ventas = pd.read_csv("ventas_eventos.csv", parse_dates=["Fecha"])
-df_vistas = pd.read_csv("vistas_eventos.csv", parse_dates=["Fecha"])
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+CSV_PATH = os.path.join(BASE_DIR, "ventas_eventos.csv")
+df_ventas = pd.read_csv(CSV_PATH, parse_dates=["Fecha"])
 
 # Crear aplicación Dash
 app = dash.Dash(__name__)
