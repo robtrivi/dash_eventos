@@ -67,6 +67,16 @@ app.layout = html.Div([
         dcc.Tab(label="Satisfacción del Cliente", children=[
             html.Div([
                 dcc.Graph(id="grafico-satisfaccion"),
+                html.Label("Tipo de análisis:"),
+                dcc.RadioItems(
+                    id="tipo-analisis-satisfaccion",
+                    options=[
+                        {"label": "Comparar por eventos", "value": "comparar"},
+                        {"label": "Promedio general", "value": "general"}
+                    ],
+                    value="general",
+                    inline=True  # Muestra las opciones horizontalmente
+                ),
                 html.Label("Filtrar por evento:"),
                 dcc.Dropdown(
                     id="filtro-evento",
@@ -166,28 +176,45 @@ def actualizar_rentabilidad(categorias_seleccionadas, ciudades_seleccionadas):
     # Agregar etiquetas a las barras
     fig.update_traces(text=df_grouped["Índice de Rentabilidad"].round(2), textposition="outside")
     return fig
-# Callback para la satisfacción del cliente
 @app.callback(
     Output("grafico-satisfaccion", "figure"),
     Input("filtro-evento", "value"),
-    Input("filtro-ciudad-satisfaccion", "value")
+    Input("filtro-ciudad-satisfaccion", "value"),
+    Input("tipo-analisis-satisfaccion", "value")
 )
-def actualizar_satisfaccion(eventos_seleccionados, ciudades_seleccionadas):
+def actualizar_satisfaccion(eventos_seleccionados, ciudades_seleccionadas, tipo_analisis):
+    # Filtrar datos según las selecciones
     df_filtrado = df_ventas[
         (df_ventas["Evento"].isin(eventos_seleccionados)) &
         (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
     ]
     df_filtrado["Satisfacción"] = pd.to_numeric(df_filtrado["Satisfacción"], errors="coerce")
     df_filtrado = df_filtrado.dropna(subset=["Satisfacción"])
-    df_grouped = df_filtrado.groupby("Fecha")["Satisfacción"].mean().reset_index()
-    fig = px.line(
-        df_grouped,
-        x="Fecha",
-        y="Satisfacción",
-        title="Satisfacción Promedio del Cliente",
-        labels={"Satisfacción": "Promedio de Satisfacción"}
-    )
-    fig.update_yaxes(range=[1, 5])  # Fijar el rango de 1 a 5
+
+    if tipo_analisis == "comparar":
+        # Agrupar por evento y fecha para comparar por eventos
+        df_grouped = df_filtrado.groupby(["Fecha", "Evento"])["Satisfacción"].mean().reset_index()
+        fig = px.line(
+            df_grouped,
+            x="Fecha",
+            y="Satisfacción",
+            color="Evento",
+            title="Satisfacción Promedio del Cliente por Evento",
+            labels={"Satisfacción": "Promedio de Satisfacción"}
+        )
+    else:
+        # Calcular el promedio general de satisfacción por fecha
+        df_grouped = df_filtrado.groupby("Fecha")["Satisfacción"].mean().reset_index()
+        fig = px.line(
+            df_grouped,
+            x="Fecha",
+            y="Satisfacción",
+            title="Satisfacción Promedio del Cliente",
+            labels={"Satisfacción": "Promedio de Satisfacción"}
+        )
+
+    # Opcional: Configurar el rango del eje Y si aplica
+    fig.update_yaxes(range=[1, 5])
     return fig
 
 # Callback para el tiempo de visualización
