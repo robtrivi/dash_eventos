@@ -1,0 +1,501 @@
+Fecha,Evento,Categoría,Entradas Vendidas,Ubicación,Satisfacción,Total,Descuento
+2024-03-15,Concierto A,Música,4,Ambato,3.3,287.35,40.18
+2024-09-23,Conferencia D,Educación,10,Quito,4.9,622.69,115.49
+2024-12-24,Conferencia D,Educación,8,Manta,4.2,214.11,42.44
+2024-10-18,Obra de Teatro B,Teatro,9,GUayaquil,4.2,420.13,48.09
+2024-03-11,Concierto A,Música,9,Cuenca,3.1,282.81,68.24
+2024-04-10,Feria C,Cultura,7,Manta,4.3,463.7,78.72
+2024-01-18,Obra de Teatro B,Teatro,2,Ambato,4.2,100.29,23.95
+2024-09-13,Feria C,Cultura,6,Ambato,4.0,190.38,24.07
+2024-03-18,Feria C,Cultura,6,GUayaquil,4.3,365.37,43.15
+2024-10-13,Obra de Teatro B,Teatro,6,Quito,4.1,469.37,134.98
+2024-08-19,Feria C,Cultura,7,GUayaquil,4.1,268.35,15.8
+2024-09-13,Obra de Teatro B,Teatro,1,Ambato,4.1,60.12,5.0
+2024-07-23,Exposición E,Arte,2,Quito,3.1,114.03,7.01
+2024-02-25,Conferencia D,Educación,1,Cuenca,3.0,31.01,7.03
+2024-08-04,Conferencia D,Educación,2,Manta,3.3,46.41,5.94
+2024-11-26,Concierto A,Música,1,Cuenca,4.9,62.24,11.5
+2024-06-11,Obra de Teatro B,Teatro,8,Manta,4.6,656.2,66.72
+2024-02-15,Concierto A,Música,8,Ambato,4.6,163.95,32.56
+2024-03-15,Feria C,Cultura,5,GUayaquil,3.2,198.75,24.04
+2024-07-21,Feria C,Cultura,1,Cuenca,4.2,86.21,18.06
+2024-07-21,Obra de Teatro B,Teatro,4,Quito,3.7,381.09,81.05
+2024-04-23,Exposición E,Arte,4,Quito,4.7,169.78,26.08
+2024-01-20,Concierto A,Música,4,Ambato,3.3,258.98,52.55
+2024-02-14,Feria C,Cultura,10,Ambato,4.6,751.56,216.21
+2024-10-22,Feria C,Cultura,7,Ambato,4.9,605.23,62.17
+2024-03-05,Exposición E,Arte,3,Quito,3.0,110.68,27.1
+2024-11-14,Conferencia D,Educación,10,Manta,3.2,738.26,207.1
+2024-02-25,Concierto A,Música,1,Manta,3.9,54.19,15.99
+2024-08-09,Conferencia D,Educación,10,Quito,4.9,666.69,106.16
+2024-09-05,Concierto A,Música,4,GUayaquil,4.7,191.66,33.89
+2024-12-05,Conferencia D,Educación,1,Ambato,3.9,23.23,2.73
+2024-05-03,Conferencia D,Educación,2,Quito,4.6,83.87,17.93
+2024-11-28,Feria C,Cultura,8,GUayaquil,3.1,737.9,65.99
+2024-08-18,Conferencia D,Educación,9,Cuenca,4.0,326.05,68.91
+2024-10-07,Concierto A,Música,5,Ambato,3.9,154.71,21.3
+2024-05-28,Feria C,Cultura,10,Ambato,3.9,358.54,90.09
+2024-06-08,Concierto A,Música,4,Quito,4.9,97.02,17.24
+2024-03-22,Concierto A,Música,5,Cuenca,4.5,400.41,25.81
+2024-09-28,Obra de Teatro B,Teatro,3,Ambato,4.9,104.59,27.32
+2024-06-19,Obra de Teatro B,Teatro,2,Cuenca,3.3,135.72,39.13
+2024-04-15,Exposición E,Arte,7,Quito,4.8,540.72,134.39
+2024-07-24,Obra de Teatro B,Teatro,6,GUayaquil,4.9,389.06,74.87
+2024-03-24,Concierto A,Música,9,Cuenca,4.5,701.57,45.93
+2024-04-11,Exposición E,Arte,10,Manta,4.5,415.1,116.86
+2024-09-17,Feria C,Cultura,9,Quito,4.8,615.85,77.74
+2024-04-17,Exposición E,Arte,2,Cuenca,4.0,57.81,7.07
+2024-11-23,Exposición E,Arte,5,Ambato,3.5,132.42,12.64
+2024-10-19,Concierto A,Música,7,GUayaquil,4.3,172.37,51.57
+2024-12-13,Obra de Teatro B,Teatro,6,GUayaquil,3.7,259.3,24.52
+2024-05-15,Exposición E,Arte,5,Cuenca,4.2,482.31,92.66
+2024-05-08,Conferencia D,Educación,10,Cuenca,4.8,787.84,224.83
+2024-10-01,Concierto A,Música,4,Cuenca,4.1,369.43,77.69
+2024-03-12,Concierto A,Música,2,Cuenca,4.2,50.57,3.33
+2024-06-22,Concierto A,Música,8,Quito,3.9,559.93,43.24
+2024-01-13,Concierto A,Música,6,GUayaquil,4.8,228.94,57.9
+2024-01-03,Obra de Teatro B,Teatro,10,Manta,4.0,729.78,72.23
+2024-05-05,Obra de Teatro B,Teatro,2,Manta,3.1,131.24,31.89
+2024-05-01,Concierto A,Música,3,Quito,4.3,282.49,68.39
+2024-12-17,Exposición E,Arte,5,Cuenca,3.3,185.97,43.96
+2024-10-10,Obra de Teatro B,Teatro,3,Manta,4.7,166.89,48.36
+2024-09-08,Concierto A,Música,9,Manta,4.4,525.1,57.51
+2024-09-22,Conferencia D,Educación,4,Quito,4.8,347.62,29.94
+2024-03-19,Concierto A,Música,9,Quito,4.9,818.55,185.81
+2024-12-24,Feria C,Cultura,6,Manta,3.7,235.64,66.75
+2024-08-02,Conferencia D,Educación,10,Manta,3.8,296.69,88.76
+2024-02-05,Conferencia D,Educación,1,Quito,3.5,66.34,12.9
+2024-10-15,Concierto A,Música,4,GUayaquil,4.1,203.95,12.83
+2024-06-19,Exposición E,Arte,4,GUayaquil,4.6,259.11,61.81
+2024-10-16,Obra de Teatro B,Teatro,10,GUayaquil,4.0,664.0,85.81
+2024-04-11,Feria C,Cultura,5,Ambato,3.5,309.97,15.75
+2024-01-08,Concierto A,Música,5,Quito,3.5,432.26,50.98
+2024-05-22,Exposición E,Arte,8,Cuenca,3.9,544.07,157.16
+2024-05-15,Conferencia D,Educación,8,Manta,4.5,401.61,101.81
+2024-01-08,Exposición E,Arte,1,Ambato,4.5,26.42,6.13
+2024-07-22,Feria C,Cultura,6,Manta,4.8,283.51,64.58
+2024-05-24,Concierto A,Música,7,Ambato,5.0,401.27,43.41
+2024-06-07,Exposición E,Arte,9,Manta,3.2,301.69,47.89
+2024-05-23,Exposición E,Arte,5,GUayaquil,3.8,343.57,60.13
+2024-06-12,Conferencia D,Educación,9,Cuenca,3.8,399.53,117.29
+2024-08-19,Obra de Teatro B,Teatro,3,Ambato,4.9,118.02,14.01
+2024-03-13,Feria C,Cultura,6,Quito,3.9,361.3,55.73
+2024-02-05,Conferencia D,Educación,4,Manta,4.0,126.34,23.6
+2024-03-05,Feria C,Cultura,7,Cuenca,3.8,235.04,15.52
+2024-02-26,Conferencia D,Educación,6,Ambato,4.2,139.86,30.77
+2024-08-15,Feria C,Cultura,1,Ambato,5.0,37.45,4.89
+2024-09-09,Obra de Teatro B,Teatro,9,Ambato,3.6,491.62,117.78
+2024-09-11,Feria C,Cultura,5,Cuenca,3.5,187.2,50.53
+2024-10-02,Concierto A,Música,7,Manta,3.3,442.36,69.77
+2024-10-15,Exposición E,Arte,9,Cuenca,5.0,190.84,18.6
+2024-02-04,Feria C,Cultura,2,Manta,4.2,112.57,13.03
+2024-01-05,Conferencia D,Educación,2,Ambato,4.4,64.54,13.88
+2024-09-27,Obra de Teatro B,Teatro,9,Cuenca,3.4,626.45,185.36
+2024-05-23,Concierto A,Música,4,GUayaquil,3.6,83.05,4.4
+2024-08-15,Conferencia D,Educación,8,Quito,4.9,166.3,41.95
+2024-04-17,Feria C,Cultura,8,Manta,4.3,448.32,81.95
+2024-12-16,Concierto A,Música,7,Cuenca,4.0,453.4,33.37
+2024-03-07,Exposición E,Arte,10,Quito,3.2,852.46,115.7
+2024-12-26,Obra de Teatro B,Teatro,8,Quito,3.2,431.3,33.7
+2024-08-07,Concierto A,Música,8,Manta,4.2,708.85,189.72
+2024-09-06,Exposición E,Arte,9,Ambato,3.2,567.75,83.5
+2024-08-26,Obra de Teatro B,Teatro,7,GUayaquil,3.9,307.42,29.08
+2024-01-07,Conferencia D,Educación,4,Ambato,3.7,179.86,23.1
+2024-12-10,Feria C,Cultura,2,Manta,4.2,89.43,14.59
+2024-12-26,Exposición E,Arte,9,GUayaquil,5.0,537.91,61.85
+2024-01-14,Feria C,Cultura,6,Manta,3.2,543.18,156.22
+2024-07-09,Feria C,Cultura,5,GUayaquil,3.4,482.34,116.07
+2024-02-27,Feria C,Cultura,3,Manta,4.8,235.42,48.73
+2024-02-06,Exposición E,Arte,3,Cuenca,4.2,109.94,28.82
+2024-06-26,Exposición E,Arte,6,Quito,3.9,540.88,72.47
+2024-11-04,Exposición E,Arte,8,Ambato,4.2,175.08,29.65
+2024-10-28,Concierto A,Música,9,GUayaquil,3.8,409.85,112.91
+2024-03-27,Obra de Teatro B,Teatro,7,Manta,3.4,696.09,76.39
+2024-01-04,Feria C,Cultura,4,Ambato,4.4,295.39,50.32
+2024-05-26,Obra de Teatro B,Teatro,3,Cuenca,3.5,106.28,25.15
+2024-03-24,Exposición E,Arte,5,Ambato,4.3,498.1,139.46
+2024-01-07,Concierto A,Música,8,Ambato,3.8,212.04,25.15
+2024-10-08,Conferencia D,Educación,3,Cuenca,3.5,64.98,17.18
+2024-12-06,Conferencia D,Educación,2,GUayaquil,4.6,160.51,37.1
+2024-09-27,Concierto A,Música,6,GUayaquil,3.7,280.6,32.79
+2024-12-24,Feria C,Cultura,4,Ambato,4.3,121.43,16.68
+2024-12-09,Concierto A,Música,6,Ambato,3.5,424.23,52.25
+2024-10-27,Obra de Teatro B,Teatro,7,Manta,3.0,630.45,84.69
+2024-02-14,Conferencia D,Educación,4,Quito,3.5,199.2,31.47
+2024-07-13,Feria C,Cultura,2,Manta,3.5,87.95,21.06
+2024-12-20,Obra de Teatro B,Teatro,7,Cuenca,3.4,422.64,48.99
+2024-02-03,Concierto A,Música,1,GUayaquil,4.5,78.86,18.35
+2024-07-01,Feria C,Cultura,8,Cuenca,4.1,498.64,138.57
+2024-08-04,Concierto A,Música,10,Quito,4.5,342.23,62.69
+2024-01-08,Obra de Teatro B,Teatro,4,Manta,4.5,330.59,92.75
+2024-02-24,Exposición E,Arte,6,Ambato,4.4,233.61,30.24
+2024-03-26,Concierto A,Música,1,GUayaquil,4.7,82.74,19.59
+2024-08-25,Feria C,Cultura,2,Ambato,5.0,164.2,30.5
+2024-02-08,Obra de Teatro B,Teatro,7,Cuenca,3.8,635.95,79.22
+2024-05-27,Exposición E,Arte,4,Quito,4.5,299.26,56.88
+2024-08-01,Concierto A,Música,2,GUayaquil,3.1,47.75,2.68
+2024-06-20,Exposición E,Arte,3,Quito,3.1,100.8,9.16
+2024-04-21,Conferencia D,Educación,2,Manta,3.1,127.94,18.02
+2024-07-19,Conferencia D,Educación,3,Manta,4.2,115.34,7.93
+2024-10-13,Obra de Teatro B,Teatro,7,Ambato,4.9,364.22,52.95
+2024-10-19,Feria C,Cultura,9,GUayaquil,3.7,257.96,23.18
+2024-02-10,Obra de Teatro B,Teatro,3,GUayaquil,3.8,204.56,16.17
+2024-11-03,Feria C,Cultura,9,Cuenca,4.9,321.52,55.0
+2024-12-10,Obra de Teatro B,Teatro,7,GUayaquil,4.6,326.29,18.02
+2024-02-21,Obra de Teatro B,Teatro,3,Quito,3.2,222.72,53.53
+2024-03-28,Feria C,Cultura,7,GUayaquil,4.4,321.4,66.85
+2024-06-06,Feria C,Cultura,9,Ambato,5.0,724.89,75.76
+2024-09-04,Feria C,Cultura,9,Quito,3.2,544.39,65.0
+2024-05-17,Exposición E,Arte,9,Ambato,3.0,638.01,162.51
+2024-03-19,Conferencia D,Educación,9,Cuenca,3.7,364.55,58.32
+2024-11-12,Feria C,Cultura,10,GUayaquil,3.5,677.57,68.01
+2024-06-24,Obra de Teatro B,Teatro,1,Cuenca,3.6,39.35,2.77
+2024-12-18,Conferencia D,Educación,5,Quito,3.3,363.05,95.02
+2024-02-24,Feria C,Cultura,1,GUayaquil,4.3,96.43,28.06
+2024-07-17,Conferencia D,Educación,5,Ambato,3.4,312.4,33.18
+2024-10-24,Exposición E,Arte,7,Manta,3.9,474.53,58.25
+2024-04-02,Concierto A,Música,5,Ambato,4.0,194.22,43.35
+2024-07-09,Obra de Teatro B,Teatro,3,Manta,4.8,226.07,60.94
+2024-10-10,Conferencia D,Educación,9,Cuenca,4.6,783.43,78.95
+2024-07-08,Concierto A,Música,10,Quito,4.0,706.3,165.15
+2024-09-26,Exposición E,Arte,3,Ambato,4.9,272.2,20.05
+2024-03-21,Conferencia D,Educación,4,Cuenca,3.8,272.48,16.49
+2024-01-03,Feria C,Cultura,2,Cuenca,4.9,182.27,52.61
+2024-04-15,Concierto A,Música,6,Quito,4.6,382.18,67.99
+2024-11-16,Conferencia D,Educación,8,Manta,4.1,693.75,151.17
+2024-01-27,Conferencia D,Educación,6,Cuenca,4.7,294.97,48.75
+2024-07-17,Feria C,Cultura,3,Cuenca,4.6,227.71,67.11
+2024-08-01,Obra de Teatro B,Teatro,8,Manta,3.1,232.16,14.07
+2024-04-27,Conferencia D,Educación,9,Quito,4.1,405.69,27.08
+2024-12-22,Obra de Teatro B,Teatro,7,Ambato,3.8,446.55,47.88
+2024-08-10,Obra de Teatro B,Teatro,1,GUayaquil,5.0,61.05,12.36
+2024-11-09,Feria C,Cultura,1,Ambato,4.8,20.59,1.85
+2024-10-17,Concierto A,Música,4,Manta,4.3,295.13,75.87
+2024-08-08,Exposición E,Arte,10,Cuenca,4.4,814.84,235.27
+2024-09-08,Feria C,Cultura,7,Cuenca,3.8,684.04,189.73
+2024-06-06,Exposición E,Arte,5,Cuenca,3.6,235.02,25.78
+2024-09-25,Conferencia D,Educación,9,GUayaquil,4.5,737.92,62.07
+2024-08-23,Feria C,Cultura,3,Cuenca,3.2,177.47,30.84
+2024-03-22,Obra de Teatro B,Teatro,2,Manta,3.6,149.47,26.23
+2024-06-25,Obra de Teatro B,Teatro,8,Ambato,3.2,313.55,43.31
+2024-10-14,Concierto A,Música,1,Ambato,3.7,43.3,6.91
+2024-01-25,Concierto A,Música,4,Cuenca,3.8,93.49,13.8
+2024-11-25,Conferencia D,Educación,10,GUayaquil,3.7,366.5,53.33
+2024-12-07,Exposición E,Arte,2,GUayaquil,4.8,140.06,33.41
+2024-06-25,Concierto A,Música,3,Cuenca,3.9,79.69,23.79
+2024-11-26,Concierto A,Música,6,Quito,4.9,461.23,100.07
+2024-01-25,Exposición E,Arte,4,Cuenca,3.5,375.75,73.89
+2024-09-07,Obra de Teatro B,Teatro,5,Manta,3.6,163.15,15.91
+2024-10-01,Exposición E,Arte,8,Ambato,4.9,447.05,119.82
+2024-03-02,Feria C,Cultura,10,Quito,3.9,944.4,98.25
+2024-11-25,Feria C,Cultura,2,Manta,3.8,177.57,44.42
+2024-10-12,Obra de Teatro B,Teatro,3,Quito,3.6,71.16,4.74
+2024-10-03,Obra de Teatro B,Teatro,5,Ambato,3.0,239.19,24.38
+2024-09-04,Obra de Teatro B,Teatro,10,Cuenca,3.4,795.73,179.69
+2024-09-15,Conferencia D,Educación,8,GUayaquil,4.6,607.08,76.74
+2024-01-10,Conferencia D,Educación,3,Manta,4.2,110.94,31.19
+2024-01-02,Concierto A,Música,6,Ambato,4.1,439.3,102.87
+2024-06-15,Conferencia D,Educación,9,GUayaquil,4.9,316.39,20.52
+2024-03-22,Concierto A,Música,10,GUayaquil,3.3,471.57,131.0
+2024-12-23,Feria C,Cultura,2,GUayaquil,4.7,66.33,4.39
+2024-03-10,Concierto A,Música,7,Ambato,4.3,229.43,68.33
+2024-10-21,Concierto A,Música,1,Quito,4.8,66.7,12.61
+2024-02-13,Feria C,Cultura,9,GUayaquil,3.3,258.04,37.86
+2024-08-07,Feria C,Cultura,2,GUayaquil,4.0,49.82,10.18
+2024-06-08,Obra de Teatro B,Teatro,8,Manta,4.4,649.91,53.29
+2024-01-04,Concierto A,Música,3,GUayaquil,4.5,299.95,15.04
+2024-09-11,Obra de Teatro B,Teatro,9,Manta,4.5,197.4,35.43
+2024-04-28,Conferencia D,Educación,1,Manta,4.5,44.23,13.1
+2024-06-15,Exposición E,Arte,6,Quito,3.6,503.23,86.66
+2024-02-11,Feria C,Cultura,10,Quito,3.1,631.26,86.92
+2024-12-22,Concierto A,Música,5,GUayaquil,4.2,134.46,16.05
+2024-03-14,Concierto A,Música,4,Ambato,3.7,120.82,22.5
+2024-10-09,Exposición E,Arte,10,Quito,4.5,538.48,79.48
+2024-07-06,Feria C,Cultura,6,Manta,4.5,402.7,88.05
+2024-07-01,Obra de Teatro B,Teatro,1,Cuenca,4.5,75.67,17.62
+2024-10-09,Obra de Teatro B,Teatro,5,Cuenca,3.2,287.99,85.42
+2024-11-07,Obra de Teatro B,Teatro,3,Ambato,4.0,195.95,16.57
+2024-04-28,Conferencia D,Educación,6,Quito,4.5,144.73,17.96
+2024-09-05,Feria C,Cultura,1,Ambato,3.5,40.52,8.85
+2024-09-07,Obra de Teatro B,Teatro,5,Cuenca,3.8,213.61,61.56
+2024-08-14,Concierto A,Música,10,Ambato,3.3,993.89,273.35
+2024-09-14,Feria C,Cultura,7,Ambato,4.2,576.06,85.97
+2024-10-18,Concierto A,Música,2,Manta,4.0,105.8,23.59
+2024-12-09,Concierto A,Música,8,Quito,3.2,429.41,51.96
+2024-12-05,Exposición E,Arte,6,Manta,3.6,166.78,10.83
+2024-12-16,Conferencia D,Educación,6,GUayaquil,4.7,532.35,63.31
+2024-04-19,Obra de Teatro B,Teatro,6,Quito,3.5,428.4,102.37
+2024-09-16,Obra de Teatro B,Teatro,10,Ambato,4.5,762.44,90.79
+2024-01-20,Obra de Teatro B,Teatro,6,Manta,3.7,246.42,21.08
+2024-09-19,Obra de Teatro B,Teatro,5,Cuenca,3.6,118.51,9.26
+2024-07-13,Feria C,Cultura,1,Manta,4.4,44.41,12.59
+2024-11-17,Feria C,Cultura,8,Manta,4.1,257.68,39.02
+2024-02-10,Exposición E,Arte,1,Ambato,3.7,86.38,7.92
+2024-11-15,Obra de Teatro B,Teatro,3,Ambato,4.0,233.3,52.54
+2024-03-15,Exposición E,Arte,8,GUayaquil,4.6,472.32,114.45
+2024-04-19,Conferencia D,Educación,4,Manta,4.7,101.93,24.63
+2024-06-02,Conferencia D,Educación,9,GUayaquil,4.3,381.34,87.03
+2024-11-18,Exposición E,Arte,3,Quito,3.2,284.06,56.27
+2024-02-17,Conferencia D,Educación,6,Manta,4.4,477.83,120.07
+2024-01-12,Concierto A,Música,5,Quito,3.2,293.46,27.82
+2024-08-09,Conferencia D,Educación,10,Cuenca,4.4,233.33,43.5
+2024-01-24,Concierto A,Música,1,Ambato,4.1,50.66,9.66
+2024-10-17,Conferencia D,Educación,1,Ambato,4.9,57.15,11.63
+2024-07-15,Obra de Teatro B,Teatro,7,Cuenca,3.2,576.56,125.0
+2024-06-15,Feria C,Cultura,4,Ambato,3.8,192.87,19.79
+2024-11-01,Feria C,Cultura,5,Manta,3.6,256.79,35.71
+2024-07-23,Exposición E,Arte,5,Cuenca,4.6,142.33,10.36
+2024-06-14,Obra de Teatro B,Teatro,2,Ambato,3.8,74.65,12.88
+2024-02-03,Concierto A,Música,9,Cuenca,3.5,274.71,72.21
+2024-01-08,Exposición E,Arte,9,Cuenca,3.7,324.48,19.6
+2024-01-24,Conferencia D,Educación,8,GUayaquil,3.3,235.66,44.78
+2024-05-03,Exposición E,Arte,5,Cuenca,4.8,255.98,30.0
+2024-10-27,Feria C,Cultura,7,Manta,4.8,140.34,8.37
+2024-01-10,Obra de Teatro B,Teatro,7,Manta,3.7,261.14,41.82
+2024-11-08,Conferencia D,Educación,5,Manta,4.3,372.09,22.78
+2024-12-10,Feria C,Cultura,8,Quito,4.9,758.51,173.61
+2024-06-19,Conferencia D,Educación,2,Ambato,3.3,145.25,34.14
+2024-11-13,Concierto A,Música,8,Manta,4.4,220.69,51.47
+2024-12-28,Feria C,Cultura,2,GUayaquil,4.5,129.93,33.92
+2024-09-15,Conferencia D,Educación,7,GUayaquil,3.6,618.09,170.3
+2024-03-27,Obra de Teatro B,Teatro,1,Cuenca,4.9,24.07,5.86
+2024-07-07,Conferencia D,Educación,2,GUayaquil,3.7,55.45,11.81
+2024-02-26,Obra de Teatro B,Teatro,6,Ambato,3.1,517.0,58.41
+2024-10-14,Feria C,Cultura,10,Ambato,4.5,454.05,52.91
+2024-02-28,Concierto A,Música,6,Quito,3.0,326.79,61.8
+2024-09-14,Obra de Teatro B,Teatro,8,GUayaquil,4.1,179.11,14.64
+2024-08-16,Exposición E,Arte,9,Manta,3.2,422.5,39.93
+2024-12-13,Feria C,Cultura,10,Ambato,4.7,230.67,67.39
+2024-01-12,Obra de Teatro B,Teatro,3,Ambato,3.9,125.55,12.23
+2024-09-24,Obra de Teatro B,Teatro,10,Quito,3.7,619.88,37.2
+2024-04-10,Conferencia D,Educación,9,Quito,4.9,451.37,72.1
+2024-09-26,Concierto A,Música,5,Ambato,3.6,269.33,78.39
+2024-05-17,Feria C,Cultura,10,GUayaquil,3.5,623.5,96.65
+2024-06-19,Exposición E,Arte,1,Manta,3.7,65.32,4.6
+2024-10-21,Conferencia D,Educación,4,GUayaquil,4.6,228.64,64.93
+2024-11-18,Conferencia D,Educación,1,Manta,3.8,81.96,23.21
+2024-07-25,Concierto A,Música,1,Cuenca,4.3,75.06,5.23
+2024-04-24,Exposición E,Arte,1,Cuenca,4.4,33.52,3.49
+2024-03-24,Concierto A,Música,6,Ambato,3.0,165.3,42.46
+2024-12-24,Conferencia D,Educación,5,Ambato,3.8,101.27,27.45
+2024-01-08,Conferencia D,Educación,1,Cuenca,4.5,50.89,7.65
+2024-11-11,Obra de Teatro B,Teatro,6,Cuenca,4.0,545.63,133.44
+2024-01-03,Exposición E,Arte,9,Cuenca,3.6,593.8,70.3
+2024-06-05,Exposición E,Arte,9,Manta,3.1,394.21,63.26
+2024-02-19,Feria C,Cultura,7,Ambato,4.4,339.79,51.99
+2024-08-03,Conferencia D,Educación,2,GUayaquil,3.9,49.25,14.22
+2024-06-04,Concierto A,Música,4,Manta,4.6,360.95,93.07
+2024-03-07,Exposición E,Arte,3,Cuenca,4.8,62.48,14.48
+2024-01-11,Conferencia D,Educación,5,Cuenca,4.1,495.49,142.72
+2024-12-11,Obra de Teatro B,Teatro,4,Quito,3.2,204.48,14.9
+2024-02-04,Obra de Teatro B,Teatro,10,Ambato,4.1,496.25,92.52
+2024-09-03,Concierto A,Música,6,GUayaquil,3.6,264.98,52.49
+2024-10-28,Feria C,Cultura,10,Ambato,3.4,989.19,64.32
+2024-05-20,Concierto A,Música,6,Quito,3.7,452.44,107.93
+2024-05-12,Concierto A,Música,2,Ambato,3.6,198.98,14.99
+2024-02-23,Conferencia D,Educación,7,GUayaquil,3.6,212.09,35.01
+2024-02-22,Exposición E,Arte,1,Ambato,4.1,20.87,3.22
+2024-02-21,Conferencia D,Educación,8,Ambato,3.9,577.66,88.02
+2024-05-09,Concierto A,Música,7,Ambato,4.5,465.95,55.51
+2024-03-07,Exposición E,Arte,9,Ambato,3.6,522.45,104.88
+2024-10-05,Obra de Teatro B,Teatro,5,Quito,4.3,299.82,80.38
+2024-11-10,Exposición E,Arte,6,Manta,4.7,219.82,21.14
+2024-07-16,Feria C,Cultura,6,Manta,3.1,130.86,29.21
+2024-01-26,Exposición E,Arte,9,Ambato,3.5,189.58,51.83
+2024-06-25,Feria C,Cultura,10,GUayaquil,4.6,387.12,86.89
+2024-09-21,Conferencia D,Educación,3,GUayaquil,3.7,205.86,12.83
+2024-08-15,Feria C,Cultura,9,GUayaquil,4.6,354.06,32.34
+2024-09-20,Obra de Teatro B,Teatro,9,Quito,4.6,739.65,163.96
+2024-02-21,Conferencia D,Educación,9,Cuenca,3.9,694.77,188.58
+2024-02-27,Feria C,Cultura,3,GUayaquil,4.8,94.46,16.44
+2024-05-09,Conferencia D,Educación,10,Ambato,3.3,755.49,145.16
+2024-04-06,Concierto A,Música,6,Manta,3.5,517.36,52.35
+2024-06-11,Obra de Teatro B,Teatro,4,Cuenca,3.6,301.94,52.26
+2024-05-06,Exposición E,Arte,4,Ambato,3.3,168.39,26.57
+2024-05-08,Conferencia D,Educación,10,Ambato,3.1,775.28,54.06
+2024-01-11,Feria C,Cultura,3,Cuenca,4.0,283.74,74.98
+2024-09-23,Exposición E,Arte,4,Ambato,3.1,371.57,108.61
+2024-06-08,Feria C,Cultura,1,Manta,4.4,26.73,7.08
+2024-11-14,Obra de Teatro B,Teatro,6,Manta,3.7,223.93,24.35
+2024-09-25,Concierto A,Música,2,GUayaquil,3.2,77.34,10.18
+2024-04-15,Concierto A,Música,6,Manta,4.9,349.98,23.15
+2024-07-18,Obra de Teatro B,Teatro,6,Cuenca,3.2,587.16,120.16
+2024-08-20,Feria C,Cultura,9,Ambato,5.0,772.84,188.57
+2024-07-16,Concierto A,Música,8,Manta,3.2,336.37,24.77
+2024-09-12,Exposición E,Arte,2,Quito,3.9,74.3,15.85
+2024-09-03,Conferencia D,Educación,5,Cuenca,4.9,436.22,76.29
+2024-07-23,Exposición E,Arte,2,Quito,4.6,118.45,33.17
+2024-10-13,Feria C,Cultura,3,Quito,3.6,133.92,37.05
+2024-12-11,Concierto A,Música,9,GUayaquil,4.0,711.07,36.26
+2024-11-19,Conferencia D,Educación,10,Ambato,3.7,601.1,49.13
+2024-12-10,Concierto A,Música,4,Ambato,4.1,263.68,33.63
+2024-08-05,Feria C,Cultura,5,Ambato,4.5,363.91,107.65
+2024-12-28,Feria C,Cultura,1,Quito,3.4,62.39,14.74
+2024-03-11,Concierto A,Música,6,Manta,4.1,150.66,41.48
+2024-11-25,Conferencia D,Educación,6,Quito,3.3,427.42,42.28
+2024-06-26,Exposición E,Arte,7,Manta,3.1,211.35,38.57
+2024-11-04,Exposición E,Arte,7,Cuenca,4.6,555.68,163.77
+2024-01-16,Feria C,Cultura,4,Manta,3.6,292.36,74.27
+2024-06-16,Exposición E,Arte,10,Quito,4.9,362.22,103.87
+2024-03-10,Obra de Teatro B,Teatro,7,Ambato,5.0,272.28,72.2
+2024-10-10,Feria C,Cultura,5,Quito,4.2,431.88,101.85
+2024-08-10,Obra de Teatro B,Teatro,1,GUayaquil,3.9,27.36,7.12
+2024-02-23,Conferencia D,Educación,6,Quito,4.7,163.45,48.3
+2024-12-15,Exposición E,Arte,8,Cuenca,3.8,491.25,90.97
+2024-12-16,Exposición E,Arte,6,Cuenca,3.9,592.88,90.91
+2024-11-06,Feria C,Cultura,9,Quito,4.3,403.02,66.99
+2024-10-26,Exposición E,Arte,9,GUayaquil,3.9,709.04,170.36
+2024-01-03,Exposición E,Arte,3,Quito,4.7,191.05,18.01
+2024-11-07,Exposición E,Arte,7,Ambato,3.3,195.32,50.26
+2024-11-09,Concierto A,Música,3,GUayaquil,4.3,116.29,21.62
+2024-08-08,Exposición E,Arte,4,GUayaquil,4.5,171.09,50.88
+2024-07-19,Obra de Teatro B,Teatro,8,Manta,3.6,696.37,47.01
+2024-05-14,Conferencia D,Educación,9,Manta,4.5,815.89,103.51
+2024-12-01,Conferencia D,Educación,10,Quito,4.8,894.41,200.23
+2024-02-06,Feria C,Cultura,7,Manta,3.2,140.37,14.99
+2024-01-22,Feria C,Cultura,9,Manta,4.0,599.23,35.06
+2024-09-17,Obra de Teatro B,Teatro,10,Manta,4.9,841.2,198.0
+2024-08-14,Conferencia D,Educación,3,Ambato,4.9,83.34,16.81
+2024-06-02,Concierto A,Música,8,GUayaquil,4.6,660.46,147.24
+2024-04-18,Concierto A,Música,1,GUayaquil,3.5,99.57,26.16
+2024-05-02,Conferencia D,Educación,7,GUayaquil,4.0,682.02,130.94
+2024-08-25,Obra de Teatro B,Teatro,4,Quito,4.0,384.41,46.45
+2024-08-21,Conferencia D,Educación,3,Cuenca,3.5,209.0,54.08
+2024-12-22,Feria C,Cultura,2,Manta,4.1,136.66,40.09
+2024-03-19,Feria C,Cultura,7,Manta,3.1,363.06,94.79
+2024-10-13,Conferencia D,Educación,1,Manta,3.4,60.96,6.26
+2024-12-23,Feria C,Cultura,9,Cuenca,3.7,235.99,26.7
+2024-02-17,Obra de Teatro B,Teatro,7,Manta,3.5,479.97,56.39
+2024-06-26,Conferencia D,Educación,8,Quito,4.3,521.84,31.72
+2024-10-18,Conferencia D,Educación,10,Quito,3.1,885.19,245.22
+2024-08-10,Conferencia D,Educación,2,Quito,3.5,97.43,8.26
+2024-01-23,Concierto A,Música,2,Cuenca,4.0,188.22,49.08
+2024-12-02,Exposición E,Arte,4,Ambato,4.5,371.63,42.48
+2024-07-11,Exposición E,Arte,4,GUayaquil,3.4,263.59,38.58
+2024-06-15,Feria C,Cultura,3,Quito,3.4,185.93,53.58
+2024-03-17,Obra de Teatro B,Teatro,2,Ambato,3.6,60.87,8.36
+2024-02-08,Feria C,Cultura,1,Quito,4.3,57.93,15.54
+2024-05-22,Obra de Teatro B,Teatro,5,Ambato,4.8,239.13,54.38
+2024-03-15,Feria C,Cultura,9,GUayaquil,3.9,223.98,63.99
+2024-01-28,Obra de Teatro B,Teatro,9,Ambato,4.1,274.14,18.2
+2024-09-09,Concierto A,Música,5,Cuenca,3.4,479.24,130.35
+2024-07-09,Conferencia D,Educación,5,Ambato,4.2,186.65,50.81
+2024-02-28,Feria C,Cultura,1,GUayaquil,4.8,51.7,5.91
+2024-09-17,Conferencia D,Educación,4,Quito,3.6,88.46,6.41
+2024-11-06,Exposición E,Arte,3,Manta,4.8,96.18,8.24
+2024-07-28,Exposición E,Arte,3,GUayaquil,4.0,128.61,28.57
+2024-02-04,Conferencia D,Educación,10,Quito,4.4,495.98,124.82
+2024-06-25,Conferencia D,Educación,9,Ambato,4.7,305.69,49.67
+2024-09-05,Conferencia D,Educación,5,Ambato,3.3,186.68,25.11
+2024-08-02,Conferencia D,Educación,6,Cuenca,3.2,434.75,106.29
+2024-05-11,Concierto A,Música,10,Manta,3.7,555.88,41.93
+2024-11-07,Exposición E,Arte,7,Quito,3.7,539.26,107.5
+2024-07-11,Conferencia D,Educación,8,Ambato,3.7,515.93,75.22
+2024-09-16,Exposición E,Arte,5,Ambato,3.0,134.76,23.39
+2024-04-26,Conferencia D,Educación,1,GUayaquil,3.8,70.71,8.55
+2024-09-22,Conferencia D,Educación,5,Quito,3.5,362.09,81.98
+2024-11-05,Exposición E,Arte,3,Manta,3.3,175.01,43.59
+2024-09-14,Obra de Teatro B,Teatro,5,Cuenca,3.4,310.83,51.56
+2024-01-09,Concierto A,Música,8,Ambato,3.6,415.68,116.87
+2024-03-26,Conferencia D,Educación,9,Ambato,3.8,795.85,93.42
+2024-07-15,Conferencia D,Educación,9,Quito,3.3,516.49,51.51
+2024-12-26,Conferencia D,Educación,9,Manta,4.1,333.99,43.78
+2024-09-24,Concierto A,Música,3,Quito,4.6,203.74,13.0
+2024-08-28,Obra de Teatro B,Teatro,1,Cuenca,4.0,50.93,11.68
+2024-08-02,Exposición E,Arte,10,Quito,4.5,762.47,61.38
+2024-03-17,Concierto A,Música,1,Manta,4.8,81.97,7.53
+2024-05-24,Feria C,Cultura,5,Ambato,4.8,358.64,38.78
+2024-07-22,Concierto A,Música,3,Quito,3.6,194.9,49.68
+2024-11-10,Conferencia D,Educación,1,GUayaquil,4.8,93.56,24.35
+2024-09-13,Conferencia D,Educación,6,Quito,4.7,244.04,37.25
+2024-10-26,Feria C,Cultura,6,Quito,4.9,506.44,35.91
+2024-07-07,Obra de Teatro B,Teatro,1,Quito,4.1,74.15,12.52
+2024-02-06,Feria C,Cultura,3,Cuenca,3.1,116.14,8.92
+2024-04-28,Feria C,Cultura,9,GUayaquil,4.3,849.25,151.88
+2024-03-21,Obra de Teatro B,Teatro,5,Quito,4.8,107.17,7.69
+2024-09-23,Conferencia D,Educación,9,Quito,4.9,811.48,64.38
+2024-04-03,Feria C,Cultura,6,GUayaquil,3.8,545.18,100.36
+2024-04-05,Exposición E,Arte,8,Cuenca,4.7,617.73,151.73
+2024-06-21,Feria C,Cultura,7,Quito,3.3,235.04,23.31
+2024-12-13,Exposición E,Arte,6,Cuenca,4.0,315.15,29.63
+2024-02-28,Obra de Teatro B,Teatro,6,Ambato,3.0,215.06,56.17
+2024-05-09,Obra de Teatro B,Teatro,7,Cuenca,4.2,363.97,82.83
+2024-01-19,Conferencia D,Educación,2,GUayaquil,4.0,50.42,3.04
+2024-07-03,Exposición E,Arte,1,Ambato,4.3,87.97,25.58
+2024-03-16,Feria C,Cultura,3,GUayaquil,4.1,66.35,10.74
+2024-01-16,Obra de Teatro B,Teatro,6,Quito,3.5,302.06,74.84
+2024-09-11,Obra de Teatro B,Teatro,2,Ambato,3.5,65.05,15.85
+2024-12-07,Concierto A,Música,5,Cuenca,4.7,340.16,93.73
+2024-09-22,Concierto A,Música,1,Manta,3.2,71.63,14.92
+2024-11-27,Obra de Teatro B,Teatro,4,Cuenca,4.9,294.58,41.96
+2024-02-08,Concierto A,Música,5,Ambato,4.6,454.53,90.31
+2024-04-02,Obra de Teatro B,Teatro,7,GUayaquil,4.3,229.68,13.91
+2024-10-07,Feria C,Cultura,5,Quito,3.7,466.3,28.34
+2024-06-22,Feria C,Cultura,9,Quito,3.5,634.03,168.86
+2024-06-08,Exposición E,Arte,2,GUayaquil,4.2,113.98,26.36
+2024-07-08,Exposición E,Arte,10,GUayaquil,3.6,775.94,55.04
+2024-08-16,Feria C,Cultura,2,Manta,4.7,166.28,33.32
+2024-02-21,Concierto A,Música,2,Cuenca,4.6,125.51,21.36
+2024-12-02,Obra de Teatro B,Teatro,6,Ambato,4.4,332.37,46.33
+2024-05-13,Exposición E,Arte,1,Ambato,5.0,93.93,12.09
+2024-03-22,Feria C,Cultura,6,Ambato,4.0,258.26,36.05
+2024-04-14,Feria C,Cultura,1,GUayaquil,5.0,34.67,3.41
+2024-06-05,Concierto A,Música,9,Manta,3.5,592.68,169.83
+2024-09-02,Feria C,Cultura,3,Manta,4.9,298.16,36.07
+2024-02-27,Concierto A,Música,2,Quito,4.9,140.49,20.69
+2024-12-06,Exposición E,Arte,8,GUayaquil,4.2,345.66,99.15
+2024-04-17,Concierto A,Música,8,Manta,3.0,792.16,129.27
+2024-07-28,Exposición E,Arte,5,Cuenca,4.5,132.92,18.4
+2024-12-25,Concierto A,Música,7,GUayaquil,4.7,515.94,75.3
+2024-02-14,Obra de Teatro B,Teatro,3,Ambato,4.4,180.32,34.65
+2024-11-24,Obra de Teatro B,Teatro,9,Quito,3.1,837.62,225.81
+2024-07-28,Feria C,Cultura,3,GUayaquil,4.6,146.19,15.84
+2024-04-13,Concierto A,Música,9,Ambato,3.8,584.37,168.04
+2024-11-11,Feria C,Cultura,8,Ambato,4.7,593.76,145.05
+2024-02-04,Obra de Teatro B,Teatro,7,Manta,3.5,505.05,28.48
+2024-08-17,Obra de Teatro B,Teatro,3,Manta,5.0,164.82,25.32
+2024-09-20,Obra de Teatro B,Teatro,7,Manta,4.6,208.26,57.96
+2024-03-04,Obra de Teatro B,Teatro,8,Ambato,3.3,714.47,72.6
+2024-12-14,Obra de Teatro B,Teatro,8,Quito,4.5,408.84,78.07
+2024-06-26,Concierto A,Música,8,Ambato,4.3,690.96,55.8
+2024-07-22,Exposición E,Arte,1,Quito,3.4,54.87,4.94
+2024-04-16,Concierto A,Música,10,Quito,4.2,274.79,37.67
+2024-08-07,Obra de Teatro B,Teatro,10,GUayaquil,3.6,968.56,280.81
+2024-10-19,Concierto A,Música,3,Cuenca,4.2,157.79,41.06
+2024-02-17,Exposición E,Arte,6,Ambato,3.2,530.16,155.41
+2024-03-08,Exposición E,Arte,10,Cuenca,4.5,500.37,79.87
+2024-03-18,Obra de Teatro B,Teatro,4,GUayaquil,4.6,353.43,42.68
+2024-12-03,Conferencia D,Educación,2,Manta,3.2,109.35,27.49
+2024-09-23,Conferencia D,Educación,7,Manta,3.7,221.88,42.05
+2024-12-08,Conferencia D,Educación,7,Quito,4.6,437.84,128.7
+2024-08-28,Conferencia D,Educación,10,Quito,4.4,260.67,62.98
+2024-12-23,Exposición E,Arte,10,Ambato,4.2,202.47,60.09
+2024-12-23,Obra de Teatro B,Teatro,3,Manta,4.5,284.8,23.94
+2024-06-13,Conferencia D,Educación,8,GUayaquil,3.5,303.0,67.85
+2024-10-20,Concierto A,Música,8,Quito,3.4,769.59,124.78
+2024-05-12,Obra de Teatro B,Teatro,1,Quito,3.1,44.57,4.27
+2024-03-22,Concierto A,Música,1,Quito,4.5,80.31,9.44
+2024-06-08,Concierto A,Música,8,Cuenca,3.3,244.6,14.59
+2024-07-28,Concierto A,Música,8,Ambato,4.0,554.28,145.33
+2024-03-22,Obra de Teatro B,Teatro,10,Manta,4.2,248.44,42.21
+2024-11-04,Exposición E,Arte,4,Ambato,3.1,224.07,13.28
+2024-11-09,Obra de Teatro B,Teatro,7,GUayaquil,4.8,178.77,14.72
+2024-04-13,Conferencia D,Educación,7,Ambato,3.7,419.14,51.73
+2024-11-20,Conferencia D,Educación,7,GUayaquil,4.1,655.78,120.12
+2024-04-27,Conferencia D,Educación,10,Manta,4.1,444.24,58.33
+2024-10-01,Exposición E,Arte,6,Quito,3.0,139.96,29.28
+2024-04-19,Feria C,Cultura,8,GUayaquil,4.3,317.25,87.26
+2024-03-23,Feria C,Cultura,9,Manta,3.8,879.44,193.52
+2024-12-20,Feria C,Cultura,6,Quito,3.6,388.04,29.85
+2024-03-26,Concierto A,Música,3,Ambato,4.3,216.25,32.44
+2024-10-27,Feria C,Cultura,10,Ambato,4.4,651.14,58.45
+2024-03-15,Concierto A,Música,8,Ambato,5.0,470.91,60.26
+2024-03-09,Conferencia D,Educación,1,Ambato,3.4,71.88,5.83
+2024-05-27,Conferencia D,Educación,2,Ambato,4.2,76.0,19.74
+2024-02-27,Feria C,Cultura,1,GUayaquil,3.4,22.11,1.85
+2024-05-27,Exposición E,Arte,6,Manta,4.3,368.15,39.32
+2024-11-03,Feria C,Cultura,7,Quito,4.8,317.81,33.51
+2024-01-08,Obra de Teatro B,Teatro,2,Manta,5.0,66.62,14.46
+2024-10-27,Obra de Teatro B,Teatro,4,Ambato,3.6,215.72,57.64
+2024-02-02,Obra de Teatro B,Teatro,3,Quito,3.9,247.47,39.28
+2024-11-07,Feria C,Cultura,5,GUayaquil,4.0,497.13,95.48
