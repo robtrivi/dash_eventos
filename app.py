@@ -22,10 +22,8 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 # --------------------------------------------------------------------
-# LAYOUT
+# ESTILOS DE TABS
 # --------------------------------------------------------------------
-
-# Estilos para Tabs
 tabs_styles = {
     "height": "45px",
     "border": "none",
@@ -49,6 +47,9 @@ tab_selected_style = {
     "border": "none"
 }
 
+# --------------------------------------------------------------------
+# LAYOUT
+# --------------------------------------------------------------------
 app.layout = dbc.Container(
     fluid=True,
     style={
@@ -82,7 +83,7 @@ app.layout = dbc.Container(
                         style=tabs_styles,
                         children=[
 
-                            # ========== TAB 1: TASA DE CONVERSIÓN ==========
+                            # ========== TAB 1: TASA DE CONVERSIÓN ========== 
                             dcc.Tab(
                                 label="Tasa de Conversión de Ventas",
                                 style=tab_style,
@@ -104,10 +105,9 @@ app.layout = dbc.Container(
                                                 children=[
                                                     html.H5("Filtros", style={"marginBottom": "1rem"}),
 
-                                                    # Texto adicional
                                                     html.P(
-                                                        "La tasa de conversión de ventas mide cuántas visualizaciones "
-                                                        "se convirtieron en ventas exitosas.",
+                                                        "La tasa de conversión de ventas mide cuántas "
+                                                        "visualizaciones se convirtieron en ventas exitosas.",
                                                         style={"marginBottom": "1rem"}
                                                     ),
 
@@ -119,7 +119,7 @@ app.layout = dbc.Container(
                                                             {"label": "Comparar por ciudades", "value": "comparar"}
                                                         ],
                                                         value="todo",
-                                                        inline=True,  # Se mantiene como en tu código original
+                                                        inline=True,
                                                         style={"marginBottom": "1rem"}
                                                     ),
 
@@ -157,7 +157,7 @@ app.layout = dbc.Container(
                                 ]
                             ),
 
-                            # ========== TAB 2: ÍNDICE DE RENTABILIDAD ==========
+                            # ========== TAB 2: ÍNDICE DE RENTABILIDAD ========== 
                             dcc.Tab(
                                 label="Índice de Rentabilidad",
                                 style=tab_style,
@@ -198,10 +198,15 @@ app.layout = dbc.Container(
                                                         multi=True,
                                                         style={"marginBottom": "1rem"}
                                                     ),
+                                                    html.P(
+                                                        "Visualizamos la evolución a lo largo del tiempo "
+                                                        "para ver tendencias en la rentabilidad.",
+                                                        style={"fontSize": "80%", "color": "#666"}
+                                                    )
                                                 ]
                                             ),
 
-                                            # Columna GRÁFICA (width=10)
+                                            # Columna de GRÁFICA (width=10)
                                             dbc.Col(
                                                 width=10,
                                                 style={"padding": "1rem", "overflowY": "auto", "height": "100%"},
@@ -214,7 +219,7 @@ app.layout = dbc.Container(
                                 ]
                             ),
 
-                            # ========== TAB 3: SATISFACCIÓN DEL CLIENTE ==========
+                            # ========== TAB 3: SATISFACCIÓN DEL CLIENTE (SIN FECHAS) ==========
                             dcc.Tab(
                                 label="Satisfacción del Cliente",
                                 style=tab_style,
@@ -244,7 +249,7 @@ app.layout = dbc.Container(
                                                             {"label": "Promedio general", "value": "general"}
                                                         ],
                                                         value="general",
-                                                        inline=True,  # Mantengo tu inline original
+                                                        inline=True,
                                                         style={"marginBottom": "1rem"}
                                                     ),
                                                     html.Label("Filtrar por evento:"),
@@ -265,6 +270,11 @@ app.layout = dbc.Container(
                                                         multi=True,
                                                         style={"marginBottom": "1rem"}
                                                     ),
+                                                    html.Div(
+                                                        "Este gráfico muestra solo la calificación promedio "
+                                                        "por Evento y Ciudad, sin usar la fecha.",
+                                                        style={"fontSize": "80%", "color": "#666"}
+                                                    )
                                                 ]
                                             ),
                                             # Gráfica (width=10)
@@ -289,8 +299,9 @@ app.layout = dbc.Container(
 )
 
 # --------------------------------------------------------------------
-# CALLBACKS (idénticos a tu código original)
+# CALLBACKS
 # --------------------------------------------------------------------
+
 @app.callback(
     Output("grafico-conversion", "figure"),
     Input("rango-fechas-conversion", "start_date"),
@@ -308,8 +319,10 @@ def actualizar_conversion(start_date, end_date, ciudades_seleccionadas, tipo_ana
         (df_vistas["Fecha"] >= start_date) &
         (df_vistas["Fecha"] <= end_date)
     ]
+
     ventas_agrupadas = df_ventas_filtrado.groupby(["Fecha", "Ubicación"])["Entradas Vendidas"].sum().reset_index()
     vistas_agrupadas = df_vistas_filtrado.groupby(["Fecha", "Ubicación"])["Tiempo de Visualización"].count().reset_index()
+
     conversion = pd.merge(ventas_agrupadas, vistas_agrupadas, on=["Fecha", "Ubicación"], how="inner")
     conversion["Tasa de Conversión"] = conversion["Entradas Vendidas"] / conversion["Tiempo de Visualización"]
 
@@ -340,7 +353,6 @@ def actualizar_conversion(start_date, end_date, ciudades_seleccionadas, tipo_ana
 
     return fig
 
-
 @app.callback(
     Output("grafico-rentabilidad", "figure"),
     Input("filtro-categoria", "value"),
@@ -351,21 +363,22 @@ def actualizar_rentabilidad(categorias_seleccionadas, ciudades_seleccionadas):
         (df_ventas["Categoría"].isin(categorias_seleccionadas)) &
         (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
     ]
+    # Margen Bruto = Ventas (Total) - Descuento
     df_filtrado["Margen Bruto"] = df_filtrado["Total"] - df_filtrado["Descuento"]
+    # Índice de Rentabilidad = Margen Bruto / Ventas (Total)
     df_filtrado["Índice de Rentabilidad"] = df_filtrado["Margen Bruto"] / df_filtrado["Total"]
 
-    df_grouped = df_filtrado.groupby("Categoría")["Índice de Rentabilidad"].mean().reset_index()
+    # AGRUPAMOS POR FECHA Y CATEGORÍA para ver la evolución en el tiempo
+    df_grouped = df_filtrado.groupby(["Fecha", "Categoría"])["Índice de Rentabilidad"].mean().reset_index()
 
-    fig = px.bar(
+    # Gráfico de líneas
+    fig = px.line(
         df_grouped,
-        x="Categoría",
+        x="Fecha",
         y="Índice de Rentabilidad",
-        title="Índice de Rentabilidad de Operaciones por Categoría",
-        labels={"Índice de Rentabilidad": "Índice de Rentabilidad Promedio"}
-    )
-    fig.update_traces(
-        text=df_grouped["Índice de Rentabilidad"].round(2),
-        textposition="outside"
+        color="Categoría",
+        title="Índice de Rentabilidad a lo largo del tiempo",
+        labels={"Índice de Rentabilidad": "Índice de Rentabilidad"}
     )
     return fig
 
@@ -377,6 +390,11 @@ def actualizar_rentabilidad(categorias_seleccionadas, ciudades_seleccionadas):
     Input("tipo-analisis-satisfaccion", "value")
 )
 def actualizar_satisfaccion(eventos_seleccionados, ciudades_seleccionadas, tipo_analisis):
+    """
+    Queremos ver la satisfacción: SÓLO 'Evento' y 'Ciudad'
+    - 'comparar': agrupar por [Evento, Ubicación]
+    - 'general': agrupar solo por [Evento]
+    """
     df_filtrado = df_ventas[
         (df_ventas["Evento"].isin(eventos_seleccionados)) &
         (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
@@ -385,25 +403,30 @@ def actualizar_satisfaccion(eventos_seleccionados, ciudades_seleccionadas, tipo_
     df_filtrado = df_filtrado.dropna(subset=["Satisfacción"])
 
     if tipo_analisis == "comparar":
-        df_grouped = df_filtrado.groupby(["Fecha", "Evento"])["Satisfacción"].mean().reset_index()
-        fig = px.line(
+        # Agrupamos por Evento y Ubicación
+        df_grouped = df_filtrado.groupby(["Evento", "Ubicación"])["Satisfacción"].mean().reset_index()
+        # Graficamos BARRAS con x=Evento, color=Ubicación
+        fig = px.bar(
             df_grouped,
-            x="Fecha",
+            x="Evento",
             y="Satisfacción",
-            color="Evento",
-            title="Satisfacción Promedio del Cliente por Evento",
+            color="Ubicación",
+            barmode="group",  # Barras agrupadas
+            title="Satisfacción Promedio por Evento y Ciudad",
             labels={"Satisfacción": "Promedio de Satisfacción"}
         )
     else:
-        df_grouped = df_filtrado.groupby("Fecha")["Satisfacción"].mean().reset_index()
-        fig = px.line(
+        # Agrupamos sólo por Evento
+        df_grouped = df_filtrado.groupby("Evento")["Satisfacción"].mean().reset_index()
+        fig = px.bar(
             df_grouped,
-            x="Fecha",
+            x="Evento",
             y="Satisfacción",
-            title="Satisfacción Promedio del Cliente",
+            title="Satisfacción Promedio General por Evento",
             labels={"Satisfacción": "Promedio de Satisfacción"}
         )
 
+    # Ajustar el rango de 1 a 5
     fig.update_yaxes(range=[1, 5])
     return fig
 
