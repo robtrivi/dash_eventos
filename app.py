@@ -83,7 +83,7 @@ app.layout = dbc.Container(
                         style=tabs_styles,
                         children=[
 
-                            # ========== TAB 1: TASA DE CONVERSIÓN ========== 
+                            # ========== TAB 1: TASA DE CONVERSIÓN ==========
                             dcc.Tab(
                                 label="Tasa de Conversión de Ventas",
                                 style=tab_style,
@@ -157,7 +157,7 @@ app.layout = dbc.Container(
                                 ]
                             ),
 
-                            # ========== TAB 2: ÍNDICE DE RENTABILIDAD ========== 
+                            # ========== TAB 2: ÍNDICE DE RENTABILIDAD ==========
                             dcc.Tab(
                                 label="Índice de Rentabilidad",
                                 style=tab_style,
@@ -178,6 +178,15 @@ app.layout = dbc.Container(
                                                 },
                                                 children=[
                                                     html.H5("Filtros", style={"marginBottom": "1rem"}),
+
+                                                    html.Label("Rango de fechas:"),
+                                                    dcc.DatePickerRange(
+                                                        id="rango-fechas-rentabilidad",
+                                                        start_date=df_ventas["Fecha"].min(),
+                                                        end_date=df_ventas["Fecha"].max(),
+                                                        display_format="YYYY-MM-DD",
+                                                        style={"marginBottom": "1rem"}
+                                                    ),
 
                                                     html.Label("Filtrar por categoría:"),
                                                     dcc.Dropdown(
@@ -311,13 +320,11 @@ app.layout = dbc.Container(
 )
 def actualizar_conversion(start_date, end_date, ciudades_seleccionadas, tipo_analisis):
     df_ventas_filtrado = df_ventas[
-        (df_ventas["Fecha"] >= start_date) &
-        (df_ventas["Fecha"] <= end_date) &
-        (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
+        (df_ventas["Fecha"] >= start_date) & (df_ventas["Fecha"] <= end_date)
+        & (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
     ]
     df_vistas_filtrado = df_vistas[
-        (df_vistas["Fecha"] >= start_date) &
-        (df_vistas["Fecha"] <= end_date)
+        (df_vistas["Fecha"] >= start_date) & (df_vistas["Fecha"] <= end_date)
     ]
 
     ventas_agrupadas = df_ventas_filtrado.groupby(["Fecha", "Ubicación"])["Entradas Vendidas"].sum().reset_index()
@@ -353,25 +360,27 @@ def actualizar_conversion(start_date, end_date, ciudades_seleccionadas, tipo_ana
 
     return fig
 
+# >>>>>> AÑADIR FECHAS AL CALLBACK DE RENTABILIDAD <<<<<<
 @app.callback(
     Output("grafico-rentabilidad", "figure"),
+    Input("rango-fechas-rentabilidad", "start_date"),
+    Input("rango-fechas-rentabilidad", "end_date"),
     Input("filtro-categoria", "value"),
     Input("filtro-ciudad-rentabilidad", "value")
 )
-def actualizar_rentabilidad(categorias_seleccionadas, ciudades_seleccionadas):
+def actualizar_rentabilidad(start_date, end_date, categorias_seleccionadas, ciudades_seleccionadas):
+    # Filtramos por rango de fecha, categoría y ciudad
     df_filtrado = df_ventas[
-        (df_ventas["Categoría"].isin(categorias_seleccionadas)) &
-        (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
+        (df_ventas["Fecha"] >= start_date) & (df_ventas["Fecha"] <= end_date)
+        & (df_ventas["Categoría"].isin(categorias_seleccionadas))
+        & (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
     ]
-    # Margen Bruto = Ventas (Total) - Descuento
     df_filtrado["Margen Bruto"] = df_filtrado["Total"] - df_filtrado["Descuento"]
-    # Índice de Rentabilidad = Margen Bruto / Ventas (Total)
     df_filtrado["Índice de Rentabilidad"] = df_filtrado["Margen Bruto"] / df_filtrado["Total"]
 
-    # AGRUPAMOS POR FECHA Y CATEGORÍA para ver la evolución en el tiempo
+    # Agrupamos por Fecha y Categoría
     df_grouped = df_filtrado.groupby(["Fecha", "Categoría"])["Índice de Rentabilidad"].mean().reset_index()
 
-    # Gráfico de líneas
     fig = px.line(
         df_grouped,
         x="Fecha",
@@ -381,7 +390,6 @@ def actualizar_rentabilidad(categorias_seleccionadas, ciudades_seleccionadas):
         labels={"Índice de Rentabilidad": "Índice de Rentabilidad"}
     )
     return fig
-
 
 @app.callback(
     Output("grafico-satisfaccion", "figure"),
@@ -396,27 +404,24 @@ def actualizar_satisfaccion(eventos_seleccionados, ciudades_seleccionadas, tipo_
     - 'general': agrupar solo por [Evento]
     """
     df_filtrado = df_ventas[
-        (df_ventas["Evento"].isin(eventos_seleccionados)) &
-        (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
+        (df_ventas["Evento"].isin(eventos_seleccionados))
+        & (df_ventas["Ubicación"].isin(ciudades_seleccionadas))
     ]
     df_filtrado["Satisfacción"] = pd.to_numeric(df_filtrado["Satisfacción"], errors="coerce")
     df_filtrado = df_filtrado.dropna(subset=["Satisfacción"])
 
     if tipo_analisis == "comparar":
-        # Agrupamos por Evento y Ubicación
         df_grouped = df_filtrado.groupby(["Evento", "Ubicación"])["Satisfacción"].mean().reset_index()
-        # Graficamos BARRAS con x=Evento, color=Ubicación
         fig = px.bar(
             df_grouped,
             x="Evento",
             y="Satisfacción",
             color="Ubicación",
-            barmode="group",  # Barras agrupadas
+            barmode="group",
             title="Satisfacción Promedio por Evento y Ciudad",
             labels={"Satisfacción": "Promedio de Satisfacción"}
         )
     else:
-        # Agrupamos sólo por Evento
         df_grouped = df_filtrado.groupby("Evento")["Satisfacción"].mean().reset_index()
         fig = px.bar(
             df_grouped,
@@ -426,10 +431,8 @@ def actualizar_satisfaccion(eventos_seleccionados, ciudades_seleccionadas, tipo_
             labels={"Satisfacción": "Promedio de Satisfacción"}
         )
 
-    # Ajustar el rango de 1 a 5
     fig.update_yaxes(range=[1, 5])
     return fig
-
 
 # --------------------------------------------------------------------
 # MAIN
